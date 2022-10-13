@@ -1,6 +1,7 @@
 # Projet CV 2022-2023
 
 This project is for the class of Design Web at HEPL.
+The project consists of taking a web site with an intressting design and integrating my CV in it.
 
 ## Original Web site
 
