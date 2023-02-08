@@ -1,0 +1,55 @@
+@import 'variables';
+
+.language {
+  background-color: $secondary-color;
+  color: $primary-color;
+  .shred {
+    background: $primary-color;
+    fill: $secondary-color;
+    width: 100vw;
+    svg {
+      display: block;
+      height: 101%;
+    }
+  }
+  h2 {
+    margin-top: 6.25rem;
+    margin-bottom: 3.5rem;
+    font-size: 1.378125rem;
+    text-align: center;
+    color: $primary-color;
+    @media (min-width: 700px) {
+      font-size: 3.15rem;
+    }
+    span {
+      display: block;
+    }
+  }
+  h3 {
+    color: $primary-color;
+  }
+  p {
+    margin: 3.5rem $base-margin;
+    font-size: 0.875rem;
+  }
+  .language-list {
+    margin: 0 $base-margin;
+    position: relative;
+    .language-list__languages {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      text-align: right;
+    }
+  }
+  ul {
+    font-size: 0.75rem;
+    li {
+      padding: 0.8203125rem 0;
+      border-top: solid 1px $primary-color;
+      &:last-of-type {
+        border-bottom: solid 1px $primary-color;
+      }
+    }
+  }
+}

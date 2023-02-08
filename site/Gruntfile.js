@@ -28,29 +28,19 @@ module.exports = function (grunt) {
                 }
             }
         },
-        htmlmin: {
+        autoprefixer: {
             options: {
-                collapseWhiteSpace: true
+                browsers: ['last 4 versions', 'ie 8', 'ie 9']
             },
             target: {
                 files: {
-                    'dist/index.html': 'src/index.html'
+                    'src/css/styles.css': 'src/css/styles.css'
                 }
-            }
+            },
         },
-        // postcss: {
-        //     options: {
-        //         processors: [
-        //             require('autoprefixer')({browsers: 'last 2 versions'}), // add vendor prefixes
-        //         ]
-        //     },
-        //     dist: {
-        //         src: 'dist/css/styles.min.css'
-        //     }
-        // },
         watch: {
-            files: ['src/js/*.js', 'src/css/scss/*.scss', 'src/index.html'],
-            tasks: ['sass', 'uglify', 'cssmin', 'htmlmin'],
+            files: ['src/js/*.js', 'src/css/scss/*.scss'],
+            tasks: ['sass', 'autoprefixer', 'uglify', 'cssmin'],
             options: {
                 livereload:true
             }
@@ -60,7 +50,7 @@ module.exports = function (grunt) {
                 options: {
                     port: 8000,
                     base: {
-                        path: 'dist/',
+                        path: './',
                         options: {
                             index: 'index.html'
                         }
@@ -73,11 +63,11 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
-    grunt.loadNpmTasks('grunt-contrib-htmlmin');
-    grunt.loadNpmTasks('grunt-postcss');
+    grunt.loadNpmTasks('grunt-autoprefixer');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-connect');
 
+    grunt.registerTask('prod', ['sass', 'autoprefixer', 'uglify', 'cssmin']);
     grunt.registerTask('default', ['connect', 'watch']);
 };
 

@@ -1,0 +1,49 @@
+@import 'variables', "top-down-button-animation";
+
+.school {
+  background: $school-color;
+  color: $primary-color;
+  padding: 0 $base-margin;
+  font-weight: 400;
+  h2 {
+    font-size: 2.034375rem;
+    font-weight: 500;
+    color: $primary-color;
+  }
+  .button--top-down:before {
+    background-color: #3c6d79;
+    opacity: 0.05;
+  }
+  .school__list-item {
+    color: $primary-color;
+    //min-height: 20.5rem;
+    display: block;
+    border: #3C6D79;
+    border-top: solid 1px;
+    padding: 2.1875rem 0 2.125rem;
+    z-index: 1;
+    img {
+      margin-bottom: 1.125rem;
+    }
+    h3 {
+      font-size: 0.875rem;
+      color: $primary-color;
+      letter-spacing: 0.012em;
+      margin-bottom: 1.125rem;
+    }
+    .list-item__school {
+      font-size: 1.421875rem;
+      letter-spacing: 0.02em;
+      margin-bottom: 1.4375rem;
+    }
+    .list-item__extra {
+      font-size: 0.875rem;
+      letter-spacing: 0.024em;
+      margin-bottom: 2.6875rem;
+    }
+    .list-item__location {
+      font-family: "Roboto", sans-serif;
+      font-size: 0.875rem;
+    }
+  }
+}

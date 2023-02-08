@@ -2,12 +2,17 @@
 $primary-color: #3C6D79;
 $secondary-color: #F9AE65;
 $light-purple: #e0e2ee;
+$school-color: #E0E2ED;
 
 // spacing
 $base-margin: 0.9722311111rem;
 
 // text sizing
 $big-text: 2.515625rem;
+
+//button top-down & down-top animation
+
+$transition-top-down: transform .3s cubic-bezier(.4,0,0,1);
 
 // Delaying animation
 

@@ -1,0 +1,44 @@
+@import "variables";
+
+.button--top-down {
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    z-index: -1;
+    transform-origin: top center;
+    transition: $transition-top-down;
+    transform: scaleY(0);
+  }
+  &:hover:before {
+    transform: scaleY(1);
+  }
+}
+
+@import "variables";
+
+$transition: transform .3s cubic-bezier(.4,0,0,1);
+
+.button--down-top {
+  position: relative;
+  z-index: 1;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    z-index: -1;
+    transform-origin: center bottom;
+    transition: $transition-top-down;
+    transform: scaleY(0);
+  }
+  &:hover:before {
+    transform: scaleY(1);
+  }
+}

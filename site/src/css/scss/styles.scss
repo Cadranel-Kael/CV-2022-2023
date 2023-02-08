@@ -1,0 +1,109 @@
+@import 'variables';
+
+/* ------------- */
+/* -- General -- */
+/* ------------- */
+
+.sr-only {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.opacity-zero {
+  opacity: 0;
+}
+
+@media (max-width: 1000px) {
+  .dt-only { /* Show in desktop only */
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+}
+
+body {
+  font-family: 'PP Neue Montreal', 'Neue Montreal', 'Helvetica Neue', 'Arial', 'Helvetica', sans-serif;
+  background: $primary-color;
+  color: white;
+  /*font-size: 1.1875em;*/
+}
+
+h1,
+h2,
+h3 {
+  text-transform: uppercase;
+  color: $secondary-color;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+//.contact--link {
+//  display: inline-block;
+//  padding: 1.09375rem;
+//  background-color: white;
+//  color: $primary-color;
+//  &:hover {
+//    background: linear-gradient(to bottom, $secondary-color, $secondary-color 100%);
+//  }
+//}
+
+/*@media (max-width: 1000px) {*/
+/*    section.steps {*/
+/*        grid-template-columns: 1fr 1fr;*/
+/*    }*/
+/*    section.steps h2 {*/
+/*        font-size: 3rem;*/
+/*        width: 60%;*/
+/*        grid-row: 1/2;*/
+/*    }*/
+/*    section.steps .sideways {*/
+/*        justify-self: right;*/
+/*        width: auto;*/
+/*        height: 15em;*/
+/*        grid-column: 2/3;*/
+/*        margin-bottom: 2em;*/
+/*    }*/
+/*    section.steps .steps h3 {*/
+/*        font-size: 1rem;*/
+/*    }*/
+/*    section.steps .steps {*/
+/*        margin-top: 0;*/
+/*        grid-column: 1/3;*/
+/*        grid-row: 2/3;*/
+/*    }*/
+/*    section.steps .steps h4 {*/
+/*        font-size: 1.875rem;*/
+/*    }*/
+/*    section.steps .text-steps {*/
+/*        font-size: 0.875rem;*/
+/*    }*/
+/*}*/
+
+/* --------------- */
+/* -- Languages -- */
+/* --------------- */
+
+.latest-project {
+  background: $secondary-color;
+  color: white;
+}
+
+
+footer {
+}
+
+
+@import 'burger-menu', 'language-list', 'marquee-text', 'text-carousel';
+@import 'section-intro', 'section-languges', 'section-nav', 'section-steps', 'section-school', "footer", "section-video";

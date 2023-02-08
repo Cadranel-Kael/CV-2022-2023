@@ -1,0 +1,25 @@
+@import 'variables';
+
+.main-nav {
+  padding: $base-margin;
+  font-family: Roboto, sans-serif;
+  font-size: 1.125rem;
+
+  >ul{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    >li {
+      padding-right: 12.4%;
+      &:first-of-type {
+        margin-right: auto;
+        padding-right: 0;
+        a {
+          margin-left: 0;
+          color: #F9AE65;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
